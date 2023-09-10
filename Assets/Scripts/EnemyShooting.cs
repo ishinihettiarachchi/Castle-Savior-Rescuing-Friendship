@@ -10,8 +10,10 @@ public class EnemyShooting : MonoBehaviour
     private float timer;
     private GameObject player;
     
+    
     void Start()
     {
+       
         player = GameObject.FindGameObjectWithTag("Player");
     }
 

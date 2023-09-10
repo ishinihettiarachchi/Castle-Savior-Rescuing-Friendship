@@ -32,8 +32,24 @@ public class EnemyFireball : MonoBehaviour
         }
     }
 
+    // OnTriggerEnter2D is called when the fireball enters a trigger collider
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            // Player has been hit by the fireball
+            // Implement player death logic here
+            PlayerLife playerLife = collider.GetComponent<PlayerLife>();
+            if (playerLife != null)
+            {
+                playerLife.Die();
+            }
 
-    
-        
-    
+            // Destroy the fireball after hitting the player
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }

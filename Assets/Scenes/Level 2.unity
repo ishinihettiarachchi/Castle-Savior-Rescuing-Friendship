@@ -19519,10 +19519,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1553824119111789780, guid: 14600da27460d7146904e24471fa0f26, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553824119111789780, guid: 14600da27460d7146904e24471fa0f26, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768627440625652608, guid: 14600da27460d7146904e24471fa0f26, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1468702496}
+    - target: {fileID: 3910609085662581896, guid: 14600da27460d7146904e24471fa0f26, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5248674596249374021, guid: 14600da27460d7146904e24471fa0f26, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -19623,6 +19635,10 @@ PrefabInstance:
     - target: {fileID: 2527665381109128317, guid: ed6d3226828f2004691a064678fa5c77, type: 3}
       propertyPath: m_Name
       value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527665382265223832, guid: ed6d3226828f2004691a064678fa5c77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed6d3226828f2004691a064678fa5c77, type: 3}

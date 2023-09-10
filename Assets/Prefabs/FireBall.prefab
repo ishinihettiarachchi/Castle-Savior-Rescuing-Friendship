@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 490063930674089402}
   - component: {fileID: 3148721487391155161}
   - component: {fileID: 2192858635907366248}
-  - component: {fileID: 5662361708688791436}
+  - component: {fileID: 8506644820062954964}
   m_Layer: 0
   m_Name: FireBall
-  m_TagString: Untagged
+  m_TagString: fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
---- !u!61 &5662361708688791436
+--- !u!61 &8506644820062954964
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
