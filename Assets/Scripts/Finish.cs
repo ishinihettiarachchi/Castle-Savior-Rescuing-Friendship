@@ -19,7 +19,7 @@ public class Finish : MonoBehaviour
         }
     }
 
-    private void CompleteLevel()
+    public void CompleteLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
