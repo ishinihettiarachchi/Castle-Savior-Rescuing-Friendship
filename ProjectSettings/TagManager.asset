@@ -8,6 +8,8 @@ TagManager:
   - Trap
   - fireball
   - endpoint
+  - River
+  - Hit
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - RiverLayer
   - 
   - 
   - 
