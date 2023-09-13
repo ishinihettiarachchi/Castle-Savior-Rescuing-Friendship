@@ -1,42 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public int maxHealth = 3;
     public int currentHealth;
 
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
-    void Start()
+    private Animator anim;
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        if (healthBar != null)
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent <Animator>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trap"))
         {
-            currentHealth = maxHealth;
-            healthBar.SetMaxHealth(maxHealth);
-        }
-        else
-        {
-            Debug.LogError("HealthBar reference is not assigned in the Inspector.");
+            
+            TakeDamage(1);
         }
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Trap"))
-        {
-            TakeDamage(1); // Call the TakeDamage function when the player hits a trap.
-        }
-    }
-
-    void TakeDamage(int damage)
+    private void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
         healthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene("Game Over"); // Replace with your game over scene name.
+    }
+
+ 
+    public void Die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("death");
+        Invoke("RestartLevel", 2f); // Restart the level after a delay (2 seconds in this case).
     }
 }
