@@ -9991,7 +9991,7 @@ GameObject:
   - component: {fileID: 111388927}
   m_Layer: 0
   m_Name: Tampolins
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47118,7 +47118,7 @@ GameObject:
   - component: {fileID: 709026134}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51527,6 +51527,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 161298810490578447, guid: 14600da27460d7146904e24471fa0f26, type: 3}
   m_PrefabInstance: {fileID: 161709473298144691}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1000010610883517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010610883516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1fb1bbdf0144ac4e9a33477fbe4da6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  healthBar: {fileID: 1759986657}
 --- !u!1001 &161709473298144691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51606,7 +51621,8 @@ PrefabInstance:
       propertyPath: jumpableGround.m_Bits
       value: 320
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4785729812510122760, guid: 14600da27460d7146904e24471fa0f26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14600da27460d7146904e24471fa0f26, type: 3}
 --- !u!1001 &2527665381442656158
 PrefabInstance:
@@ -51894,7 +51910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9108443367555106994, guid: 2f1712b92ea444c40895b5af8581cca3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.57
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 9108443367555106994, guid: 2f1712b92ea444c40895b5af8581cca3, type: 3}
       propertyPath: m_LocalPosition.z

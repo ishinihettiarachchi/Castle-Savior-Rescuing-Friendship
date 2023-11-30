@@ -10,6 +10,11 @@ TagManager:
   - endpoint
   - River
   - Hit
+  - PowerUp
+  - Enemy
+  - Key
+  - Cage
+  - Friend
   layers:
   - Default
   - TransparentFX
