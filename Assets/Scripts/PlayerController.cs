@@ -7,6 +7,14 @@ public class PlayerController : MonoBehaviour
     private List<GameObject> activePowerUps = new List<GameObject>();
     [SerializeField] private AudioSource powerupSoundEffect;
 
+    private PlayerHealth playerHealth;
+
+    private void Start()
+    {
+        // Assuming the PlayerHealth script is on the same GameObject as PlayerController
+        playerHealth = GetComponent<PlayerHealth>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUp"))
@@ -14,10 +22,9 @@ public class PlayerController : MonoBehaviour
             powerupSoundEffect.Play();
             MovePowerUpWithPlayer(collision.gameObject);
         }
-        
+
         else if (collision.gameObject.CompareTag("Enemy"))
         {
-            // Handle enemy collision
             // Check if the player has a power-up
             if (HasPowerUp())
             {
@@ -65,7 +72,6 @@ public class PlayerController : MonoBehaviour
     {
         // Implement logic to handle normal player-enemy collision
         // For example, subtract player health, play a sound, etc.
+        playerHealth.TakeDamage(1);
     }
-
-    
 }
