@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb;
-
+    [SerializeField] AudioSource trapSoundEffect; 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
-            
+            trapSoundEffect.Play();
             TakeDamage(1);
         }
     }

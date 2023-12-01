@@ -5,14 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private List<GameObject> activePowerUps = new List<GameObject>();
-    
+    [SerializeField] private AudioSource powerupSoundEffect;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-            // Handle power-up collision
-            // You can move the power-up here or invoke a method to handle it
+            powerupSoundEffect.Play();
             MovePowerUpWithPlayer(collision.gameObject);
         }
         
