@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private List<GameObject> activePowerUps = new List<GameObject>();
     [SerializeField] private AudioSource powerupSoundEffect;
+    [SerializeField] AudioSource EnemyAttackSoundEffect;
+
 
     private PlayerHealth playerHealth;
 
@@ -23,6 +25,13 @@ public class PlayerController : MonoBehaviour
             MovePowerUpWithPlayer(collision.gameObject);
         }
 
+        if (collision.gameObject.CompareTag("Key"))
+        {
+            // Handle collision with the key prefab
+            HandleKeyCollision(collision.gameObject);
+            HandleCageCollision(); // Call HandleCageCollision here
+        }
+
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             // Check if the player has a power-up
@@ -37,11 +46,28 @@ public class PlayerController : MonoBehaviour
             else
             {
                 // Handle normal player-enemy collision (e.g., player takes damage)
+                EnemyAttackSoundEffect.Play();
                 HandlePlayerEnemyCollision();
             }
         }
     }
 
+    private void HandleKeyCollision(GameObject keyPrefab)
+    {
+        // You can also destroy or deactivate the key prefab if needed
+        Destroy(keyPrefab);
+    }
+
+    private void HandleCageCollision()
+    {
+        // Destroy the cage prefab or handle it in a way that suits your game
+        // For example:
+        GameObject cage = GameObject.FindGameObjectWithTag("Cage");
+        if (cage != null)
+        {
+            Destroy(cage);
+        }
+    }
     private void MovePowerUpWithPlayer(GameObject powerUp)
     {
         // You can move the power-up by parenting it to the player
@@ -49,6 +75,13 @@ public class PlayerController : MonoBehaviour
 
         // Add the power-up to the list of active power-ups
         activePowerUps.Add(powerUp);
+    }
+
+ 
+
+    private void HandleCageCollision(GameObject cage)
+    {
+        Destroy(cage);
     }
 
     private bool HasPowerUp()
