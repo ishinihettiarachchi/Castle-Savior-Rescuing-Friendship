@@ -15,7 +15,9 @@ Here're some of the project's best features:
 *   Simple
 
 
-  
+  <h2>Project Screenshots:</h2>
+
+<img src="https://drive.google.com/file/d/1gMCGE0Qi2GCgeCbG9Dc0ARUEfPqCQ25Q/view?usp=sharing" alt="project-screenshot" width="400" height="200/">
   
 <h2>💻 Built with</h2>
 
