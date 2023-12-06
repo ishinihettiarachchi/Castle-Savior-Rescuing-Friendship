@@ -10,4 +10,10 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Level 1");
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting the game"); // Optional: Log a message for debugging purposes
+        Application.Quit(); // This function quits the application (works in standalone builds)
+    }
 }
