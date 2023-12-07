@@ -4862,7 +4862,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.504
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -26886,7 +26886,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 521aca30d87ce924eb3064928d5d2721, type: 3}
+    m_Font: {fileID: 12800000, guid: 4d700fe7bb3005b4fbca091d07acee81, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0

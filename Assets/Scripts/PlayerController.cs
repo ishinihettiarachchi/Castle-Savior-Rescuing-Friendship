@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private List<GameObject> activePowerUps = new List<GameObject>();
     [SerializeField] private AudioSource powerupSoundEffect;
     [SerializeField] AudioSource EnemyAttackSoundEffect;
+    [SerializeField] AudioSource EnemyAttackSuccessSoundEffect;
+
 
     private PlayerHealth playerHealth;
 
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
             if (HasPowerUp())
             {
                 // Make the enemy vanish when hit by the player with a power-up
+                EnemyAttackSuccessSoundEffect.Play();
                 Destroy(collision.gameObject);
 
                 // Destroy the collided power-up

@@ -8,6 +8,8 @@ public class StickyPlatform : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            Debug.Log("Player entered StickyPlatform");
+
             collision.gameObject.transform.SetParent(transform);
         }
     }
@@ -16,6 +18,8 @@ public class StickyPlatform : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            Debug.Log("Player exited StickyPlatform");
+
             collision.gameObject.transform.SetParent(null);
         }
     }
